@@ -5,9 +5,8 @@
  * @param {!express:Response} res HTTP response context.
  */
 
-const { checkSchema } = require('express-validator');
 
-exports.helloWorld = (req, res) => {
+export function helloWorld(req, res) {
   const method = req.method;
   let message = req.query.message || req.body.message || 'Empty Request';
   let reply = {
@@ -18,4 +17,4 @@ exports.helloWorld = (req, res) => {
   };
   
   res.status(200).send(reply);
-};
+}
