@@ -7,7 +7,7 @@
 
 
 export function helloWorld(req, res) {
-  const method = req.method;
+  
   let message = req.query.message || req.body.message || 'Empty Request';
   let reply = {
   	path : req.path,
