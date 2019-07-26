@@ -6,8 +6,9 @@
  */
 
 
-export function helloWorld(req, res) {
-  
+
+exports.helloWorld = (req, res) => {
+  const method = req.method;
   let message = req.query.message || req.body.message || 'Empty Request';
   let reply = {
   	path : req.path,
@@ -17,4 +18,4 @@ export function helloWorld(req, res) {
   };
   
   res.status(200).send(reply);
-}
+};
